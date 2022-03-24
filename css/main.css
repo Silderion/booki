@@ -1,0 +1,494 @@
+@media screen and (min-width: 601px){
+    .header {
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: "logo . navbar button";
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo . button" "navbar navbar navbar";
+    }
+}
+
+body{
+    background-image: url('../img/vieux-fond-noir-texture-grunge-fond-ecran-sombre-tableau-noir-tableau-noir-mur-salle_1258-28312.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    display: grid;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+  }
+
+.headerImg {
+    grid-area: logo;
+    padding: 0 2rem;
+    height: 4.813rem;
+    border-style: none;
+}
+
+@media screen and (max-width: 600px){
+    .headerNav {
+        order: 2;
+    }
+}
+
+.headerNav {
+    display: flex;
+    align-items: center;
+    grid-area: navbar;
+}
+
+@media screen and (max-width: 600px){
+    .headerNavLink[data-active="true"] {
+        border-bottom-color: #0065FC;
+    }
+}
+
+.headerNavLink[data-active="true"] {
+  border-top: 3px solid #d9d9d9;
+}
+.headerNavLink[data-active="true"] {
+  color: #d9d9d9;
+}
+.headerNavLink {
+    padding: 2rem;
+    font-weight: 500;
+    text-align: center;
+    transition-duration: 0.1s;
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+    background-color: transparent;
+    color: #d9d9d9;
+    text-decoration: none;
+}
+
+.headerSignup {
+    display: flex;
+    align-items: center;
+    grid-area: button;
+    padding: 2rem;
+    color: #d9d9d9;
+    font-weight: 600;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.main {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    display: block;
+}
+
+.searchHeaderTitle {
+    font-size: 2em;
+    margin: .67em 0;
+    margin-bottom: 0.67em;
+    color:#d9d9d9;
+}
+
+.searchHeaderSubtitle {
+    margin-top: 0;
+    color: #d9d9d9;
+}
+
+@media screen and (max-width: 600px){
+    .searchForm {
+        display: flex;
+        width: 100%;
+    }
+}
+
+
+.searchForm {
+    display: inline-flex;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.searchFormWrapicon {
+    background-color: #d9d9d9;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    text-align: center;
+}
+
+.searchFormSearchinput {
+    border-right: none;
+    border-left: none;
+    border-top: #d9d9d9 2px solid;
+    border-bottom: #d9d9d9 2px solid;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 14rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+}
+
+.searchFormSubmitinput {
+    color: #d9d9d9;
+    font-weight: bold;
+    font-family: "Raleway", "Sans serif";
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #383838;
+    padding: 20px;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.searchFilters {
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.searchFiltersTitle {
+    margin: 0 2rem 1rem 0;
+    display: flex;
+    align-items: center;
+    color: #d9d9d9;
+}
+
+.searchFiltersFilter {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    border: 2px solid #383838;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    font-weight: bold;
+}
+
+.searchFiltersFilterWrapicon {
+    background-color: #383838;
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+    min-height: 3.5rem;
+    min-width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -2px;
+}
+
+.searchFiltersFilterTitle {
+    margin: 0 1rem;
+    color: #d9d9d9;
+}
+
+.searchResult {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.searchResultWrapicon {
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+    border: solid 1px #d9d9d9;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.searchResultText {
+    margin: 0;
+    color:#f2f2f2;
+}
+
+.hosting {
+    display: grid;
+    column-gap: 2rem;
+    grid-template-columns: 6fr 3fr;
+}
+
+@media (max-width: 1440px){
+    .hosting {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+    }
+}
+
+
+@media (min-width: 925px){
+    .hostingMain {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px){
+    .hostingMain {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hostingMain {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.hostingWrapper, .hostingPopular, .hostingMain {
+  background-color: #383838;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.hostingMainHeader {
+    grid-column: 1/-1;
+}
+
+.hostingMainHeaderTitle {
+    margin: 0;
+    color:#d9d9d9;
+}
+
+.hostingMainCard {
+    background-color: #818181;
+    padding: 0.375rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 16px #0000002e;
+    transition-duration: 0.1s;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+a {
+    color: #d9d9d9;
+    text-decoration: none;
+}
+
+.hostingMainCardFigure {
+    margin: 0;
+}
+
+.hostingMainCardFigureImg {
+    height: 7rem;
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+img {
+    border-style: none;
+}
+
+.hostingMainCardFigureCaptionTitle {
+    margin: 0.25rem 0.75rem 0 0.75rem;
+}
+
+.hostingMainCardDesc {
+    margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+
+.hostingMainCardDescPrice {
+    font-weight: bold;
+}
+
+.hostingMainCardGrade {
+    margin: 0 0.75rem 0.25rem 0.75rem;
+}
+
+.hostingMainViewmore {
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    .hostingPopular {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto repeat(3, 9rem);
+    }
+}
+
+.hostingPopular {
+    display: grid;
+    row-gap: 2rem;
+    align-items: start;
+    grid-template-rows: auto repeat(3, 1fr);
+}
+
+.hostingPopularTitle {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    color: #d9d9d9;
+}
+
+.hostingPopularWrapcontent {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    overflow: auto;
+}
+
+.hostingPopularWrapcontentWrapimg {
+    position: relative;
+    min-height: 100%;
+    width: 33%;
+    min-width: 33%;
+    max-width: 33%;
+}
+
+.hostingPopularWrapcontentWrapimgImg {
+    border-radius: 1rem 0 0 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hostingPopularWrapcontentContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.hostingPopularWrapcontentContentWhitespace {
+    flex: 1;
+}
+
+.hostingMainCardGrade {
+    margin: 0 0.75rem 0.25rem 0.75rem;
+}
+
+@media (max-width: 925px){
+    .activity {
+        row-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 12rem 12rem 12rem;
+    }
+}
+
+@media (min-width: 1100px){
+    .activity {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .activity {
+        row-gap: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+    }
+}
+
+.activity {
+  display: grid;
+  column-gap: 2rem;
+  margin: 4rem 0;
+}
+
+.activityTitle {
+    grid-column: 1/-1;
+    color:#d9d9d9
+}
+
+@media (min-width: 1100px){
+    .activityCard1 {
+        grid-row: 2/7;
+        grid-column: 1/2;
+    }
+
+    .activityCard2 {
+        grid-column: 2/3;
+        grid-row: 2/5;
+    }
+
+    .activityCard3 {
+        grid-column: 3/4;
+        grid-row: 2/7;
+    }
+    
+    .activityCard4 {
+        grid-column: 4/5;
+        grid-row: 2/3;
+    }
+
+    .activityCard5 {
+        grid-column: 2/3;
+        grid-row: 6/7;
+    }
+
+    .activityCard6 {
+        grid-column: 4/5;
+        grid-row: 4/7;
+    }
+}
+
+.activityCard {
+  box-shadow: 0 0 20px #0000002e;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.1s;
+}
+
+.activityCardWrapimg {
+    position: relative;
+    flex: 1;
+}
+
+.activityCardWrapimgImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.activityCardTitle {
+    margin: 1.2rem 1.5rem;
+}
+
+.activityCardWrapimgImg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: none;
+    width: 100%;
+}
+
+.footerColumnwrapper {
+    display: flex;
+    max-width: 100%;
+    width: 1440px;
+    margin: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.footerColumnwrapperColumn {
+    width: 30%;
+    padding: 2rem 2rem;
+}
+
+.footerColumnwrapperColumnLink {
+    display: block;
+    margin: 1rem 0;
+}
+
+.footerColumnwrapperColumnTitle {
+    color:#d9d9d9
+}

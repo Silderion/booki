@@ -1,3 +1,9 @@
+body{
+    background-image: url('../img/vieux-fond-noir-texture-grunge-fond-ecran-sombre-tableau-noir-tableau-noir-mur-salle_1258-28312.webp');
+    background-size: cover;
+    background-position: center;
+}
+
 @media screen and (min-width: 601px){
     .header {
         grid-template-columns: auto 1fr auto auto;
@@ -10,12 +16,6 @@
         grid-template-columns: auto 1fr auto;
         grid-template-areas: "logo . button" "navbar navbar navbar";
     }
-}
-
-body{
-    background-image: url('../img/vieux-fond-noir-texture-grunge-fond-ecran-sombre-tableau-noir-tableau-noir-mur-salle_1258-28312.webp');
-    background-size: cover;
-    background-position: center;
 }
 
 .header {
@@ -114,8 +114,9 @@ body{
 }
 
 .searchFormWrapicon {
-    background-color: #d9d9d9;
+    background-color: #383838;
     padding: 1rem 1.25rem;
+    border: #d9d9d9 2px solid;
     border-radius: 1rem 0 0 1rem;
     text-align: center;
 }
@@ -131,6 +132,7 @@ body{
     font-size: 1rem;
     font-weight: bold;
     font-family: "Raleway", "Sans serif";
+    background-color: #818181;
 }
 
 .searchFormSubmitinput {
